@@ -32,15 +32,15 @@
 					<form action="{{site.Params.career_form_action}}" name="career_form" method="POST" data-netlify="true" enctype="multipart/form-data">
 						<div class="form-group mb-3">
 							<label class="mb-1" for="name">{{i18n `fname`}} <span class="text-danger">*</span></label>
-							<input class="form-control rounded-sm text-dark shadow-none" id="name" type="text" placeholder="{{i18n `fname`}}" required>
+							<input class="form-control rounded-sm text-dark shadow-none" name="name" type="text" placeholder="{{i18n `fname`}}" required>
 						</div>
 						<div class="form-group mb-3">
 							<label class="mb-1" for="last-name">{{i18n `lname`}} <span class="text-danger">*</span></label>
-							<input class="form-control rounded-sm text-dark shadow-none" id="last-name" type="text" placeholder="{{i18n `lname`}}" required>
+							<input class="form-control rounded-sm text-dark shadow-none" name="last-name" type="text" placeholder="{{i18n `lname`}}" required>
 						</div>
 						<div class="form-group mb-3">
 							<label class="mb-1" for="email">{{i18n `email`}} <span class="text-danger">*</span></label>
-							<input class="form-control rounded-sm text-dark shadow-none" id="email" type="email" placeholder="{{i18n `email`}}" required>
+							<input class="form-control rounded-sm text-dark shadow-none" name="email" type="email" placeholder="{{i18n `email`}}" required>
 						</div>
 						<div class="form-group mb-3">
 							<label class="mb-1" for="cv">{{i18n `upload_cv`}} <span class="text-danger">*</span></label>
@@ -51,7 +51,7 @@
 						<button class="btn btn-sm btn-primary w-100" type="submit" aria-label="{{i18n `apply_now`}}">{{i18n `apply_now`}}</button>
 					</form>
 					
-					<div class="share-this-post d-flex flex-wrap align-items-center rounded-2 mt-4">
+<!--					<div class="share-this-post d-flex flex-wrap align-items-center rounded-2 mt-4">
 						<span class="m-1 me-2 mt-0 text-dark fw-500">{{i18n `share_this_job`}}</span>
 						<ul class="m-1 mt-0 list-inline d-inline-block">
 							{{ $url := printf "%s" .RelPermalink | absLangURL }}
@@ -67,7 +67,7 @@
 						</ul>
 					</div>
 				</div>
-				
+-->				
 				<div class="sidebar-widget bg-white rounded-2 shadow">
 					<h4 class="mb-3 h5">{{i18n `other_jobs`}}</h4>
 					{{ range first 4 (where site.RegularPages "Section" "career") }}
